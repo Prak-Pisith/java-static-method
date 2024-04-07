@@ -16,6 +16,22 @@ class MyUtils {
 
 }
 
+class Duck {
+    private int size;
+
+    public static void testDuck() {
+//        System.out.println(this.size);
+    }
+}
+
+class Tiger {
+    public static int count = 0;
+
+    public Tiger() {
+        this.count++;
+    }
+}
+
 class Main {
     public static void main(String[] args) {
         int min = MyUtils.Min(6, 15);
@@ -24,5 +40,15 @@ class Main {
         // Math also static
         int max = Math.max(12, 56);
         System.out.println("Max is " + max);
+
+        // ====
+
+//        Tiger[] tigers = Tiger[3];
+        Tiger t1 = new Tiger();
+        Tiger t2 = new Tiger();
+        Tiger t3 = new Tiger();
+
+        System.out.println("Tiger Count: " + Tiger.count);
     }
+
 }
