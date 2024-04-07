@@ -25,6 +25,10 @@ class Duck {
 }
 
 class Tiger {
+    // Immutable variable
+    public static final int X_VALUE = 25;
+
+    // Belong to class
     static int count = 0;
 
     public Tiger() {
@@ -43,6 +47,10 @@ class Main {
 
         // ====
 
+        // static variable init when the class load
+        // before object init
+        System.out.println("Tiger Static First Count: " + Tiger.count);
+
         Tiger[] tigers = new Tiger[5];
         tigers[0] = new Tiger();
         tigers[1] = new Tiger();
@@ -55,6 +63,8 @@ class Main {
         }
         System.out.println("Tiger Object Count: " + tigerCount);
         System.out.println("Tiger Static Count: " + Tiger.count);
+
+        System.out.println("Tiger Immutable Value: " + Tiger.X_VALUE);
     }
 
 }
