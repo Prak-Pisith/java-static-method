@@ -25,7 +25,7 @@ class Duck {
 }
 
 class Tiger {
-    public static int count = 0;
+    static int count = 0;
 
     public Tiger() {
         this.count++;
@@ -43,12 +43,18 @@ class Main {
 
         // ====
 
-//        Tiger[] tigers = Tiger[3];
-        Tiger t1 = new Tiger();
-        Tiger t2 = new Tiger();
-        Tiger t3 = new Tiger();
-
-        System.out.println("Tiger Count: " + Tiger.count);
+        Tiger[] tigers = new Tiger[5];
+        tigers[0] = new Tiger();
+        tigers[1] = new Tiger();
+        tigers[2] = new Tiger();
+        tigers[3] = new Tiger();
+        tigers[4] = new Tiger();
+        int tigerCount = 0;
+        for (Tiger tiger : tigers) {
+            tigerCount++;
+        }
+        System.out.println("Tiger Object Count: " + tigerCount);
+        System.out.println("Tiger Static Count: " + Tiger.count);
     }
 
 }
